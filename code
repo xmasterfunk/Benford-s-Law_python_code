@@ -24,7 +24,7 @@ def count_first_digit(data_str):#TAKE AS AN ARGUMENT A STR-COLUMN NAME
     mask=df[data_str]>1.
     data=list(df[mask][data_str])
     for i in range(len(data)):
-        while data[i]>10:
+        while data[i]>=10:
             data[i]=data[i]/10
     first_digits=[int(x) for x in sorted(data)]
     unique=(set(first_digits))#a list with unique values of first_digit list
